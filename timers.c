@@ -529,7 +529,7 @@
                 /* The timer expired before it was added to the active timer
                  * list.  Reload it now.  */
                 xResult = xTimerGenericCommand( pxTimer, tmrCOMMAND_START_DONT_TRACE, xNextExpireTime, NULL, tmrNO_DELAY );
-                configASSERT( xResult );
+//                configASSERT( xResult );
                 ( void ) xResult;
             }
             else
@@ -819,7 +819,7 @@
                             if( ( pxTimer->ucStatus & tmrSTATUS_IS_AUTORELOAD ) != 0 )
                             {
                                 xResult = xTimerGenericCommand( pxTimer, tmrCOMMAND_START_DONT_TRACE, xMessage.u.xTimerParameters.xMessageValue + pxTimer->xTimerPeriodInTicks, NULL, tmrNO_DELAY );
-                                configASSERT( xResult );
+//                                configASSERT( xResult );
                                 ( void ) xResult;
                             }
                             else
@@ -934,7 +934,7 @@
                 else
                 {
                     xResult = xTimerGenericCommand( pxTimer, tmrCOMMAND_START_DONT_TRACE, xNextExpireTime, NULL, tmrNO_DELAY );
-                    configASSERT( xResult );
+//                    configASSERT( xResult );
                     ( void ) xResult;
                 }
             }
